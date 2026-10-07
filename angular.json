@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "music-site": {
+    "Style-Fashion-shop": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -57,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "music-site:build:production"
+              "buildTarget": "Style-Fashion-shop:build:production"
             },
             "development": {
-              "buildTarget": "music-site:build:development"
+              "buildTarget": "Style-Fashion-shop:build:development"
             }
           },
           "defaultConfiguration": "development"
