@@ -1,0 +1,16 @@
+.about_container {
+  text-align: center;
+  padding: 20px;
+}
+
+.about_container h1 {
+  margin-bottom: 40px;
+}
+
+.about_container p {
+  text-align: start;
+  margin: auto;
+  font-size: 1.4rem;
+  max-width: 850px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

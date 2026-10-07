@@ -1,0 +1,163 @@
+/*MIAN*/
+
+.home_text h1 {
+  text-align: center;
+  font-size: 10rem;
+}
+
+.main_box {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.main_cube {
+  max-width: 400px;
+  letter-spacing: 1cap;
+  font-size: 25px;
+}
+
+.main_cube img {
+  max-width: 300px;
+}
+
+#pictures {
+  width: 80px;
+}
+
+.text_box {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.text_box h2 {
+  margin-top: 45px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.3cap;
+}
+
+.text_box p {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  color: rgb(136, 136, 136);
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 3ch;
+}
+
+.picture_box {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.picture_box img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.section_box {
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+  background-size: 1000px;
+  background-position: -600% 40%;
+  background-repeat: no-repeat;
+}
+
+.section_box_text {
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: 0px;
+  height: auto;
+}
+
+.section_box_text h3 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 0.3cap;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.section_box_text p {
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 3ch;
+  color: rgb(136, 136, 136);
+}
+
+/*MIAN*/
+
+/*MOBILE*/
+
+@media (max-width: 1200px) {
+  .main_box {
+    display: block;
+    text-align: center;
+  }
+
+  .main_cube {
+    margin: 0 auto;
+  }
+
+  .text_box {
+    margin: 60px;
+  }
+
+  .picture_box img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    padding: 40px;
+  }
+
+  .section_box {
+    max-width: 1100px;
+    height: 800px;
+    margin: 0 auto;
+
+    background-size: 1px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section_box_text {
+    margin-left: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main_cube img {
+    width: 250px;
+  }
+
+  .section_box {
+    max-width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    background-size: 1px;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section_box_text {
+    margin-top: 1rem;
+    margin-left: 50px;
+    padding: 20px;
+    height: auto;
+  }
+
+  .section_box h3 {
+    margin-top: 2px;
+  }
+}
+
+/*MOBILE*/

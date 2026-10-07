@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+/*HEADER*/
+
+.navbar_container {
+  max-width: 1800px;
+  margin-top: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0 15px;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
+.navbar a:hover {
+  color: rgb(148, 148, 148);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.active {
+  display: block;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hamburger_menu {
+  display: inline-block;
+}
+
+.hamburger_menu img {
+  display: none;
+  width: 40px;
+}
+
+/*HEADER*/
+
+/*MOBILE*/
+
+@media (max-width: 1200px) {
+
+   .hamburger_menu img {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .navbar_container {
+    background-color: white;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar {
+    margin: 0 auto;
+    max-height: 0;
+    max-width: 300px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .navbar.active {
+    display: block;
+    max-height: 300px;
+  }
+
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+
+  .navbar li {
+    display: block;
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .navbar.active {
+    display: block;
+    max-height: 300px;
+  }
+
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+
+  .navbar li {
+    display: block;
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    text-align: center;
+  }
+}
+/*MOBILE*/

@@ -1,0 +1,9 @@
+<h1>Product Details</h1> 
+
+<div *ngIf="product as p"> 
+
+  <img class="product-image" [src]="product.image" [alt]="product.title">
+
+  <h2>{{ p.title }}</h2> <p>{{ p.price }} $</p> 
+
+  <p>{{ p.description }}</p> </div>

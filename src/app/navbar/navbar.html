@@ -1,0 +1,25 @@
+<div class="navbar_container">
+  <div class="mobile-menu">
+    <div class="hamburger_menu">
+      <img 
+  src="./img/hamburger.png" 
+  alt="menu" 
+  id="menuBtn"
+  (click)="toggleMenu()"
+/>
+    </div>
+  </div>
+
+  <div 
+  class="navbar" 
+  id="navbar"
+  [class.active]="menuOpen"
+>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/products">Products</a></li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<h1 class="title">Products</h1>
+
+<p>Products count: {{ products.length }}</p>
+
+<div class="products-container">
+  <div
+    class="product-card"
+    *ngFor="let product of products"
+    [routerLink]="['/products', product.id]"
+  >
+    <img [src]="product.image" [alt]="product.title" />
+
+    <div class="info">
+      <h3>{{ product.shortTitle }}</h3>
+
+      <button class="price-btn" (click)="addToCart(product); $event.stopPropagation()">
+        🛒 Add to cart • ${{ product.price }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 🛒 CART -->
+<div class="cart-box">
+  <div class="cart-icon">
+    🛒
+    <span class="cart-count">{{ cart.length }}</span>
+  </div>
+
+  <p *ngIf="cart.length === 0">Your cart is empty</p>
+
+  <div class="cart-item" *ngFor="let item of cart">
+    <span>{{ item.shortTitle }}</span>
+    <span>x{{ item.quantity }}</span>
+    <span>${{ item.price * item.quantity }}</span>
+  </div>
+
+  <div class="cart-total" *ngIf="cart.length > 0">
+    <strong>Total: ${{ getTotal().toFixed(2) }}</strong>
+  </div>
+    
+
+  <!-- 🔔 TOAST -->
+  <div class="toast" *ngIf="toasts.length > 0">
+    <button class="close-btn" (click)="toasts = []">✖</button>
+
+    <div class="toast-text" *ngFor="let t of toasts">
+      <span class="toast-label">Hozzáadva:</span> {{ t }}
+    </div>
+  </div>
+</div>
