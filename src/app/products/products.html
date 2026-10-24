@@ -42,7 +42,7 @@
 
   <!-- 🔔 TOAST -->
   <div class="toast" *ngIf="toasts.length > 0">
-    <button class="close-btn" (click)="toasts = []">✖</button>
+    <button class="close-btn" aria-label="Értesítés bezárása" (click)="closeToast(0)">✖</button>
 
     <div class="toast-text" *ngFor="let t of toasts">
       <span class="toast-label">Hozzáadva:</span> {{ t }}

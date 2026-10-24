@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectorRef } from '@angular/core';
@@ -11,9 +11,10 @@ import { RouterLink } from '@angular/router';
   templateUrl: './products.html',
   styleUrls: ['./products.css'],
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, OnDestroy {
   products: any[] = [];
   cart: any[] = [];
+  private toastTimeout: ReturnType<typeof setTimeout> | undefined;
 
   // 🧠 TOAST
   message: string = '';
@@ -65,11 +66,24 @@ export class ProductsComponent implements OnInit {
   toasts: string[] = [];
 
   addToast(product: any) {
-    this.toasts.push(product.title);
+    this.toasts = [product.title];
+    clearTimeout(this.toastTimeout);
+    this.toastTimeout = setTimeout(() => {
+      this.toasts = [];
+      this.toastTimeout = undefined;
+    }, 3000);
   }
 
   closeToast(index: number) {
     this.toasts.splice(index, 1);
+    if (this.toasts.length === 0) {
+      clearTimeout(this.toastTimeout);
+      this.toastTimeout = undefined;
+    }
+  }
+
+  ngOnDestroy(): void {
+    clearTimeout(this.toastTimeout);
   }
 
   getTotal(): number {
